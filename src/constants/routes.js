@@ -1,0 +1,11 @@
+export const ACCOUNT = '/account';
+export const ADMIN = '/admin';
+export const CENTER_REQUEST = '/center-request';
+export const GIG_OFFER_CLOSE = '/gig-offer-close';
+export const GIG_OFFER_SUBMIT = '/gig-offer-submit';
+export const HOME = '/home';
+export const LANDING ='/';
+export const PASSWORD_FORGET = '/pw-forget';
+export const SIGN_IN = '/signin';
+export const SIGN_OUT = '/signout';
+export const SIGN_UP = '/signup';
