@@ -6,7 +6,8 @@ actual
 #cc00ff
 #330099
 #cc99ff
-#
+#22205f
+
 
 // SASS style sheet */
 // Palette color codes */
