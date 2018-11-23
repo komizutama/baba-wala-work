@@ -1,5 +1,12 @@
 http://paletton.com/#uid=54B0D0knsst9qP2hzzpsimpeV6S
 
+actual
+#ffccff
+#ccccff
+#cc00ff
+#330099
+#cc99ff
+#
 
 // SASS style sheet */
 // Palette color codes */
