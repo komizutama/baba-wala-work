@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CenterRequest = () => (
+const CenterRequestPage = () => (
   <div>
-    <h1>CenterRequest</h1>
+    <h1>New Center Request</h1>
   </div>
 );
 
-export default CenterRequest;
+export default CenterRequestPage;
