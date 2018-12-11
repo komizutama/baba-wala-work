@@ -41,6 +41,7 @@ const App = () => (
       <Route path={ROUTES.JOB_POSTING_EDIT} component={JobPostingEditPage} />
       <Route path={ROUTES.LOCATIONS} component={LocationsPage} />
       <Route path={ROUTES.PROJECTS} component={ProjectsPage} />
+      <Route path={ROUTES.CENTER_REQUEST} component={CenterRequestPage} />
 
 
     </div>
