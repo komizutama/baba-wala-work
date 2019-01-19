@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
+import aboutPage from '../About';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import CenterRequestPage from '../CenterRequest';
@@ -34,6 +35,7 @@ const App = () => (
       <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
       <Route path={ROUTES.DONATE} component={DonationPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
+      <Route path={ROUTES.ABOUT} component={aboutPage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
       <Route path={ROUTES.JOBS} component={JobListPage} />
