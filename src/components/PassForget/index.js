@@ -7,7 +7,7 @@ const PassForgetPage = () => (
   <div>
     <h1>Password Forget</h1>
       <div>
-        <p>I remember my Password! Let me <Link to={ROUTES.SIGN_IN}>Sign In</Link>!</p>
+        <p>I remember my Password! Let me <Link to={ROUTES.LOG_IN}>Log In</Link>!</p>
       </div>
       <div>
         <Link to={ROUTES.SIGN_UP}>Create an account</Link>

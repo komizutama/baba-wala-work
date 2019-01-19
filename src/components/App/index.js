@@ -16,7 +16,7 @@ import LandingPage from '../Landing';
 import Navigation from '../Navigation';
 import PassForgetPage from '../PassForget';
 import SignUpPage from '../SignUp';
-import SignInPage from '../SignIn';
+import LogInPage from '../LogIn';
 import ProjectsPage from '../Projects';
 import LocationsPage from '../Locations';
 
@@ -31,7 +31,7 @@ const App = () => (
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route path={ROUTES.LOG_IN} component={LogInPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
       <Route path={ROUTES.DONATE} component={DonationPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
