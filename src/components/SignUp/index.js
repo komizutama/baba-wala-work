@@ -37,6 +37,7 @@ class SignUpFormBase extends Component {
 
 
   onSubmit = event => {
+//Checkback
 // eslint-disable-next-line
     const { username, email, passwordOne } = this.state;
 
@@ -102,7 +103,7 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">Sign Up</button>
+      <button disabled={isInvalid} type="Register">Sign Up</button>
 
         {error && <p>{error.message}</p>}
       </form>

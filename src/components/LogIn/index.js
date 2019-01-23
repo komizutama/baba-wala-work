@@ -5,8 +5,8 @@ import * as ROUTES from '../../constants/routes';
 
 const LogInPage = () => (
   <div>
-    <h1>Log In Baba Wala</h1>
-    <div class="login">
+    <h1>Log In Baba Walla</h1>
+    <div className="login">
     </div>
     <div>
       <Link to={ROUTES.PASSWORD_FORGET}>Did you forget your password?</Link>
