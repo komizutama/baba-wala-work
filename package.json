@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.8.0",
+    "firebase-tools": "^6.3.0",
     "firebaseui": "^3.5.2",
     "npm": "^6.6.0",
     "popmotion": "^8.6.0",
