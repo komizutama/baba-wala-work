@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
   BrowserRouter as Router,
   Route,
@@ -25,9 +26,8 @@ import * as ROUTES from '../../constants/routes';
 const App = () => (
   <Router>
     <div>
-      <Navigation />
 
-      <hr />
+
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
