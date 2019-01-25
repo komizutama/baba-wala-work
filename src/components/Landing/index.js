@@ -4,23 +4,34 @@ import styled from 'styled-components';
 
 import * as ROUTES from '../../constants/routes';
 // Styles
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
+
 const Container = styled.div`
   display: grid;
   justify-items: center;
-`
+`;
 
 const Wrapper = styled.div`
-margin: 15vh 0 0;
+margin: 5vh 0 0 0;
 width: 80vw;
-`
+`;
+
+const Title = styled.h1`
+  font-size: 2em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const WordBlock = styled.p`
+  width: 60vw;
+  font-size: 1 em;
+  text-align: center;
+  color: slategrey;
+`;
+
 // ReactDOM
 const LandingPage = () => (
   <Container>
+    <Title>BabaWallas.Work</Title>
     <Wrapper>
       <svg id="Layer_1" data-name="Layer 1"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 987.124 559.856"> <defs />
     <path className="cls-1"
@@ -30,7 +41,8 @@ const LandingPage = () => (
     transform="translate(-7 -219)" />
       </svg>
     </Wrapper>
-        <Title>Coming Soon!</Title>
+    <WordBlock>A social network for Baba lovers to collaborate on projects</WordBlock>
+    <Title>Coming Soon!</Title>
   </Container>
 );
 
