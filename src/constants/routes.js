@@ -12,4 +12,4 @@ export const LOCATIONS ='/locations';
 export const PASSWORD_FORGET = '/pw-forget';
 export const PROJECTS = '/projects';
 export const LOG_IN = '/login';
-export const SIGN_UP = '/signup';
+export const REGISTER = '/register';

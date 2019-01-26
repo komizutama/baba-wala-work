@@ -15,8 +15,8 @@ import JobPostingEditPage from '../JobPostingEdit'
 import LandingPage from '../Landing';
 import Navigation from '../Navigation';
 import PassForgetPage from '../PassForget';
-import SignUpPage from '../SignUp';
-import LogInPage from '../LogIn';
+import RegisterPage from '../Register';
+import LogInPage from '../Register';
 import ProjectsPage from '../Projects';
 import LocationsPage from '../Locations';
 
@@ -30,7 +30,7 @@ const App = () => (
       <hr />
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+      <Route path={ROUTES.REGISTER} component={RegisterPage} />
       <Route path={ROUTES.LOG_IN} component={LogInPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
       <Route path={ROUTES.DONATE} component={DonationPage} />
