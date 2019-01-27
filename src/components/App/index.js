@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+import {  BrowserRouter as Router, Route }from 'react-router-dom';
+
 import aboutPage from '../About';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
@@ -14,14 +12,15 @@ import JobPostingPage from '../JobPosting';
 import JobPostingEditPage from '../JobPostingEdit'
 import LandingPage from '../Landing';
 import Navigation from '../Navigation';
-import PassForgetPage from '../PassForget';
+import ForgotPasswordPage from '../ForgotPassword';
 import RegisterPage from '../Register';
 import LogInPage from '../Register';
 import ProjectsPage from '../Projects';
 import LocationsPage from '../Locations';
 
 import * as ROUTES from '../../constants/routes';
-import { withFirebase } from '../Firebase/index';
+// eslint-disable-next-line
+import { withFirebase } from '../Firebase';
 
 class App extends Component {
   constructor(props) {
@@ -34,14 +33,16 @@ class App extends Component {
 
   componentDidMount() {
     this.listener = this.props.firebase.auth.onAuthStateChanged(
-      authUser
+      authUser => {
+        authUser
         ? this.setState({ authUser })
         : this.setState({ authUser: null });
-    });
+      },
+    );
   }
 
   componentWillUnmount() {
-  this.listener();
+    this.listener();
   }
 
   render () {
@@ -54,8 +55,8 @@ class App extends Component {
 
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.REGISTER} component={RegisterPage} />
-          <Route path={ROUTES.LOG_IN} component={LogInPage} />
-          <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
+          <Route path={ROUTES.SIGN_IN} component={LogInPage} />
+          <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
           <Route path={ROUTES.DONATE} component={DonationPage} />
           <Route path={ROUTES.HOME} component={HomePage} />
           <Route path={ROUTES.ABOUT} component={aboutPage} />

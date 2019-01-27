@@ -11,10 +11,10 @@ const SignUpPage = () => (
     Input form for email and password
     <SignUpForm />
     <div>
-      <Link to={ROUTES.LOG_IN}>I've already got an account!</Link>
+      <Link to={ROUTES.SIGN_IN}>I've already got an account!</Link>
     </div>
     <div>
-      <Link to={ROUTES.PASSWORD_FORGET}>Did you forget your password?</Link>
+      <Link to={ROUTES.FORGOT_PASSWORD}>Did you forget your password?</Link>
     </div>
   </div>
 );

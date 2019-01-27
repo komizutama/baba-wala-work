@@ -25,7 +25,7 @@ const NavigationAuth = () => (
         <Link to={ROUTES.DONATE}>Donate</Link>
       </li>
       <li>
-        <Link to={ROUTES.JOBS}>All</Link>
+        <Link to={ROUTES.JOBS}>All Jobs</Link>
       </li>
       <li>
         <Link to={ROUTES.PROJECTS}>Projects</Link>
@@ -34,7 +34,7 @@ const NavigationAuth = () => (
         <Link to={ROUTES.LOCATIONS}>Locations</Link>
       </li>
       <li>
-        <Link to={ROUTES.LOG_IN}>Log In</Link>
+        <Link to={ROUTES.SIGN_IN}>Log In</Link>
       </li>
       <li>
         <Link to={ROUTES.REGISTER}>Register</Link>
@@ -51,13 +51,16 @@ const NavigationNonAuth = () => (
         <Link to={ROUTES.ABOUT}>About</Link>
       </li>
       <li>
-        <Link to={ROUTES.DONATE}>Donate</Link>
+        <Link to={ROUTES.SIGN_IN}>Log In</Link>
       </li>
       <li>
-        <Link to={ROUTES.LOG_IN}>Log In</Link>
+        <Link to={ROUTES.FORGOT_PASSWORD}>Forgot Password</Link>
       </li>
       <li>
         <Link to={ROUTES.REGISTER}>Register</Link>
+      </li>
+      <li>
+        <Link to={ROUTES.DONATE}>Donate</Link>
       </li>
     </ul>
   </div>

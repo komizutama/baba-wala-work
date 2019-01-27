@@ -12,7 +12,7 @@ const LogInPage = () => (
     <LogInForm />
     <SignUpLink />
       <div>
-        <Link to={ROUTES.PASSWORD_FORGET}>Did you forget your password?</Link>
+        <Link to={ROUTES.FORGOT_PASSWORD}>Did you forget your password?</Link>
       </div>
   </div>
 );
