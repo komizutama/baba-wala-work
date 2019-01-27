@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  BrowserRouter as Router, Route }from 'react-router-dom';
+import {  BrowserRouter as Router, Route } from 'react-router-dom';
 
 import aboutPage from '../About';
 import AccountPage from '../Account';
@@ -8,19 +8,19 @@ import CenterRequestPage from '../CenterRequest';
 import DonationPage from '../Donate';
 import HomePage from '../Home';
 import JobListPage from '../JobList';
-import JobPostingPage from '../JobPosting';
-import JobPostingEditPage from '../JobPostingEdit'
+import JobPostPage from '../JobPost';
+import JobPostEditPage from '../JobPostEdit'
 import LandingPage from '../Landing';
 import Navigation from '../Navigation';
 import ForgotPasswordPage from '../ForgotPassword';
 import RegisterPage from '../Register';
-import LogInPage from '../Register';
+import LogInPage from '../LogIn';
 import ProjectsPage from '../Projects';
 import LocationsPage from '../Locations';
 
 import * as ROUTES from '../../constants/routes';
 // eslint-disable-next-line
-import { withFirebase } from '../Firebase';
+import { withFirebase } from '../Firebase/index';
 
 class App extends Component {
   constructor(props) {
@@ -54,24 +54,24 @@ class App extends Component {
           <hr />
 
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
-          <Route path={ROUTES.REGISTER} component={RegisterPage} />
-          <Route path={ROUTES.SIGN_IN} component={LogInPage} />
-          <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
-          <Route path={ROUTES.DONATE} component={DonationPage} />
-          <Route path={ROUTES.HOME} component={HomePage} />
-          <Route path={ROUTES.ABOUT} component={aboutPage} />
-          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-          <Route path={ROUTES.ADMIN} component={AdminPage} />
-          <Route path={ROUTES.JOBS} component={JobListPage} />
-          <Route path={ROUTES.JOB_POSTING} component={JobPostingPage} />
-          <Route path={ROUTES.JOB_POSTING_EDIT} component={JobPostingEditPage} />
-          <Route path={ROUTES.LOCATIONS} component={LocationsPage} />
-          <Route path={ROUTES.PROJECTS} component={ProjectsPage} />
-          <Route path={ROUTES.CENTER_REQUEST} component={CenterRequestPage} />
+          <Route exact path={ROUTES.REGISTER} component={RegisterPage} />
+          <Route exact path={ROUTES.SIGN_IN} component={LogInPage} />
+          <Route exact path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
+          <Route exact path={ROUTES.DONATE} component={DonationPage} />
+          <Route exact path={ROUTES.HOME} component={HomePage} />
+          <Route exact path={ROUTES.ABOUT} component={aboutPage} />
+          <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+          <Route exact path={ROUTES.JOBS} component={JobListPage} />
+          <Route exact path={ROUTES.JOB_POSTING} component={JobPostPage} />
+          <Route exact path={ROUTES.JOB_POSTING_EDIT} component={JobPostEditPage} />
+          <Route exact path={ROUTES.LOCATIONS} component={LocationsPage} />
+          <Route exact path={ROUTES.PROJECTS} component={ProjectsPage} />
+          <Route exact path={ROUTES.CENTER_REQUEST} component={CenterRequestPage} />
         </div>
       </Router>
     );
   }
 }
 
-export default App;
+export default withFirebase(App);

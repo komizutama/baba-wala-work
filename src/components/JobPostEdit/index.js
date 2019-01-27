@@ -1,9 +1,9 @@
 import React from 'react';
 
-const JobPostingEditPage = () => (
+const JobPostEditPage = () => (
   <div>
     <h1>Job Posting Edit Page</h1>
   </div>
 );
 
-export default JobPostingEditPage;
+export default JobPostEditPage;

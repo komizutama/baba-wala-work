@@ -1,9 +1,9 @@
 import React from 'react';
 
-const JobPostingPage = () => (
+const JobPostPage = () => (
   <div>
      <h1>Job Posting</h1>
   </div>
 );
 
-export default JobPostingPage;
+export default JobPostPage;
