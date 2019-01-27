@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -21,35 +21,56 @@ import ProjectsPage from '../Projects';
 import LocationsPage from '../Locations';
 
 import * as ROUTES from '../../constants/routes';
+import { withFirebase } from '../Firebase/index';
 
-const App = () => (
-  <Router>
-    <div>
-      <Navigation />
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-      <hr />
+    this.state = {
+      authUser: null,
+    };
+  }
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.REGISTER} component={RegisterPage} />
-      <Route path={ROUTES.LOG_IN} component={LogInPage} />
-      <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
-      <Route path={ROUTES.DONATE} component={DonationPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.ABOUT} component={aboutPage} />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
-      <Route path={ROUTES.JOBS} component={JobListPage} />
-      <Route path={ROUTES.JOB_POSTING} component={JobPostingPage} />
-      <Route path={ROUTES.JOB_POSTING_EDIT} component={JobPostingEditPage} />
-      <Route path={ROUTES.LOCATIONS} component={LocationsPage} />
-      <Route path={ROUTES.PROJECTS} component={ProjectsPage} />
-      <Route path={ROUTES.CENTER_REQUEST} component={CenterRequestPage} />
+  componentDidMount() {
+    this.listener = this.props.firebase.auth.onAuthStateChanged(
+      authUser
+        ? this.setState({ authUser })
+        : this.setState({ authUser: null });
+    });
+  }
 
+  componentWillUnmount() {
+  this.listener();
+  }
 
-    </div>
-  </Router>
+  render () {
+    return(
+      <Router>
+        <div>
+          <Navigation authUser={this.state.authUser}/>
 
+          <hr />
 
-);
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
+          <Route path={ROUTES.REGISTER} component={RegisterPage} />
+          <Route path={ROUTES.LOG_IN} component={LogInPage} />
+          <Route path={ROUTES.PASSWORD_FORGET} component={PassForgetPage} />
+          <Route path={ROUTES.DONATE} component={DonationPage} />
+          <Route path={ROUTES.HOME} component={HomePage} />
+          <Route path={ROUTES.ABOUT} component={aboutPage} />
+          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route path={ROUTES.ADMIN} component={AdminPage} />
+          <Route path={ROUTES.JOBS} component={JobListPage} />
+          <Route path={ROUTES.JOB_POSTING} component={JobPostingPage} />
+          <Route path={ROUTES.JOB_POSTING_EDIT} component={JobPostingEditPage} />
+          <Route path={ROUTES.LOCATIONS} component={LocationsPage} />
+          <Route path={ROUTES.PROJECTS} component={ProjectsPage} />
+          <Route path={ROUTES.CENTER_REQUEST} component={CenterRequestPage} />
+        </div>
+      </Router>
+    );
+  }
+}
 
 export default App;
