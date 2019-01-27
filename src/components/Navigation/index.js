@@ -33,12 +33,6 @@ const NavigationAuth = () => (
       <li>
         <Link to={ROUTES.LOCATIONS}>Locations</Link>
       </li>
-      <li>
-        <Link to={ROUTES.SIGN_IN}>Log In</Link>
-      </li>
-      <li>
-        <Link to={ROUTES.REGISTER}>Register</Link>
-      </li>
     </ul>
     <SignOutButton />
   </div>
