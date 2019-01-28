@@ -13,7 +13,6 @@ const ForgotPasswordPage = () => (
         <Link to={ROUTES.REGISTER}>Create an account</Link>
       </div>
   </div>
-
-)
+);
 
 export default ForgotPasswordPage;
