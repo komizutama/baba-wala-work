@@ -31,7 +31,7 @@ const App = () => (
 
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.REGISTER} component={RegisterPage} />
-      <Route path={ROUTES.SIGN_IN} component={LogInPage} />
+      <Route path={ROUTES.LOG_IN} component={LogInPage} />
       <Route path={ROUTES.FORGOT_PASSWORD} component={ForgotPasswordPage} />
       <Route path={ROUTES.DONATE} component={DonationPage} />
       <Route path={ROUTES.HOME} component={HomePage} />

@@ -52,7 +52,7 @@ const NavigationNonAuth = () => (
         <Link to={ROUTES.ABOUT}>About</Link>
       </li>
       <li>
-        <Link to={ROUTES.SIGN_IN}>Log In</Link>
+        <Link to={ROUTES.LOG_IN}>Log In</Link>
       </li>
       <li>
         <Link to={ROUTES.FORGOT_PASSWORD}>Forgot Password</Link>

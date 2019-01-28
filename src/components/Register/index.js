@@ -11,7 +11,7 @@ const SignUpPage = () => (
     Input form for email and password
     <SignUpForm />
     <div>
-      <Link to={ROUTES.SIGN_IN}>I've already got an account!</Link>
+      <Link to={ROUTES.LOG_IN}>I've already got an account!</Link>
     </div>
     <div>
       <Link to={ROUTES.FORGOT_PASSWORD}>Did you forget your password?</Link>
@@ -113,9 +113,9 @@ class SignUpFormBase extends Component {
 
 
 
-const SignUpLink = () => (
+const RegisterLink = () => (
   <p>
-    Don't have an account? <Link to={ROUTES.REGISTER}>Sign Up</Link>
+    Don't have an account? <Link to={ROUTES.REGISTER}>Register a new one!</Link>
   </p>
 )
 
@@ -123,4 +123,4 @@ const SignUpForm = compose(withRouter(withFirebase(SignUpFormBase)));
 
 export default SignUpPage;
 
-export { SignUpForm, SignUpLink }
+export { SignUpForm, RegisterLink }

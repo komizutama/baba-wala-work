@@ -11,5 +11,5 @@ export const LANDING ='/';
 export const LOCATIONS ='/locations';
 export const FORGOT_PASSWORD = '/forgot-password';
 export const PROJECTS = '/projects';
-export const SIGN_IN = '/login';
+export const LOG_IN = '/login';
 export const REGISTER = '/register';

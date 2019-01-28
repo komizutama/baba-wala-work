@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-import { SignUpLink } from '../Register';
+import { RegisterLink } from '../Register';
+import {ForgotPasswordLink } from '../ForgotPassword'
 import { withFirebase } from '../Firebase/index'
 import * as ROUTES from '../../constants/routes';
 
@@ -10,10 +11,8 @@ const LogInPage = () => (
   <div>
     <h1>Log in, my Dear</h1>
     <LogInForm />
-    <SignUpLink />
-      <div>
-        <Link to={ROUTES.FORGOT_PASSWORD}>Did you forget your password?</Link>
-      </div>
+    <ForgotPasswordLink />
+    <RegisterLink />
   </div>
 );
 
@@ -86,6 +85,12 @@ const LogInForm = compose(
   withFirebase,
 )(LogInFormBase);
 
+const LogInLink = () => (
+  <p>
+    <Link to={ROUTES.LOG_IN}>I know my password, let me log in!</Link>
+  </p>
+);
+
 export default LogInPage;
 
-export { LogInForm };
+export { LogInForm, LogInLink };
