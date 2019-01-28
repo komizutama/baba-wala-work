@@ -117,7 +117,7 @@ const SignUpLink = () => (
   <p>
     Don't have an account? <Link to={ROUTES.REGISTER}>Sign Up</Link>
   </p>
-);
+)
 
 const SignUpForm = compose(withRouter(withFirebase(SignUpFormBase)));
 
