@@ -12,7 +12,7 @@ const AccountPage = () => (
       </div>
     )}
   </AuthUserContext.Consumer>
-);
+)
 
 // auth user
 const condition = authUser => !!authUser;
